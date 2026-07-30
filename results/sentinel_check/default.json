@@ -1,0 +1,20 @@
+{
+  "dataset": "/tmp/stage/rebuilt_fixed.csv",
+  "negative_pupil_rows": 438,
+  "train_windows": 2928,
+  "test_windows": 768,
+  "test_participants": 9,
+  "elevated_windows": 115,
+  "pooled_auc": 0.7725547639656435,
+  "average_precision": 0.2743371239015422,
+  "cluster_ci_lower": 0.6823420951897886,
+  "cluster_ci_upper": 0.8540793012181853,
+  "member_aucs": [
+    0.7694919768293494,
+    0.7435381849657101,
+    0.7063386377255476,
+    0.7556295359211666,
+    0.7233770557294095
+  ],
+  "label": "default"
+}

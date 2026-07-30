@@ -1,0 +1,12 @@
+{
+  "protocol": "participant",
+  "variant": "CNN+TCN+GRU",
+  "seed": 123,
+  "parameters": 130865,
+  "test_windows": 1253,
+  "r2": -0.5518779754638672,
+  "mse": 3.3495216369628906,
+  "spearman": 0.3385623738385874,
+  "qwk": 0.2023860418692519,
+  "auc": 0.5872680317284634
+}

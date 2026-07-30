@@ -1,0 +1,21 @@
+{
+  "question": "Does the residual negative-pupil artefact change the seated headline?",
+  "design": "Two runs from one pooled table; only the pupil masking rule differs. Frozen seed-42 split, five-CNN ensemble, identical library and hardware.",
+  "default_rule": {
+    "negative_pupil_rows": 438,
+    "pooled_auc": 0.7725547639656435,
+    "average_precision": 0.2743371239015422,
+    "cluster_ci_lower": 0.6823420951897886,
+    "cluster_ci_upper": 0.8540793012181853
+  },
+  "strict_rule": {
+    "negative_pupil_rows": 0,
+    "pooled_auc": 0.7704374459018577,
+    "average_precision": 0.27037141932375974,
+    "cluster_ci_lower": 0.68133438102218,
+    "cluster_ci_upper": 0.8516554608679934
+  },
+  "delta_auc": 0.002117318063785789,
+  "conclusion": "Removing the artefact moves pooled seated AUC by +0.0021, far inside the participant-cluster interval of the published result. The artefact is not material to the seated conclusion.",
+  "note": "Both runs used TensorFlow 2.21 on CPU and give AUC near 0.771, against 0.757 for the published TensorFlow 2.20 GPU run. That offset is library and hardware variation, which is why the comparison is between two local runs rather than against the published value."
+}

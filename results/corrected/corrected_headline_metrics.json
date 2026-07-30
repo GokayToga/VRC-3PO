@@ -1,0 +1,29 @@
+{
+  "dataset_rows": 100367,
+  "all_windows": 6442,
+  "all_test_participants": 17,
+  "passive_test_participants": 9,
+  "passive_test_windows": 768,
+  "elevated_windows": 115,
+  "prevalence": 0.14973958333333334,
+  "pooled_auc": 0.756947866036354,
+  "pooled_average_precision": 0.25875841263246646,
+  "participant_equal_auc": 0.7508356170399719,
+  "participant_equal_average_precision": 0.3551890991552656,
+  "cluster_bootstrap_auc": {
+    "estimate": 0.756947866036354,
+    "lower": 0.6957014454520861,
+    "upper": 0.8135199774520145,
+    "bootstrap_replicates": 4996
+  },
+  "participants_with_both_classes": 5,
+  "participant_macro_auc": 0.7534387698476156,
+  "cluster_bootstrap_macro_auc": {
+    "estimate": 0.7534387698476156,
+    "lower": 0.613029211029211,
+    "upper": 0.8994445534089547,
+    "bootstrap_replicates": 5000
+  },
+  "split_seed": 42,
+  "bootstrap_seed": 42
+}

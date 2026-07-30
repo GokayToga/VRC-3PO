@@ -1,0 +1,12 @@
+{
+  "protocol": "blocked_within_participant",
+  "variant": "CNN",
+  "seed": 42,
+  "parameters": 3537,
+  "test_windows": 843,
+  "r2": 0.20569324493408203,
+  "mse": 2.796900510787964,
+  "spearman": 0.46153574100558287,
+  "qwk": 0.33416924453279684,
+  "auc": 0.7025098391687435
+}

@@ -1,0 +1,10 @@
+participant_id,windows,elevated_windows,prevalence,auc,average_precision,source_dataset
+simulations_16.0,135,0,0.0,,,simulations
+simulations_2.0,125,5,0.04,0.7266666666666667,0.0842447123777047,simulations
+simulations_20.0,110,0,0.0,,,simulations
+simulations_24.0,45,27,0.6,0.9979423868312757,0.998677248677248,simulations
+simulations_4.0,125,22,0.176,0.8733451015004413,0.43253321439914477,simulations
+terrain_102.0,57,0,0.0,,,terrain
+terrain_104.0,57,24,0.42105263157894735,0.6300505050505051,0.6023373281485493,terrain
+terrain_113.0,57,0,0.0,,,terrain
+terrain_114.0,57,37,0.6491228070175439,0.5391891891891892,0.6927223972775189,terrain

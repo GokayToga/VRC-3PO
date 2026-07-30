@@ -1,0 +1,12 @@
+{
+  "protocol": "blocked_within_participant",
+  "variant": "VRC-3PO",
+  "seed": 123,
+  "parameters": 137345,
+  "test_windows": 843,
+  "r2": 0.06330901384353638,
+  "mse": 3.2982616424560547,
+  "spearman": 0.39194686830696307,
+  "qwk": 0.18472745857755501,
+  "auc": 0.6729446691451839
+}

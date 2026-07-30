@@ -1,0 +1,20 @@
+{
+  "dataset": "/tmp/stage/strict_fixed.csv",
+  "negative_pupil_rows": 0,
+  "train_windows": 2928,
+  "test_windows": 768,
+  "test_participants": 9,
+  "elevated_windows": 115,
+  "pooled_auc": 0.7704374459018577,
+  "average_precision": 0.27037141932375974,
+  "cluster_ci_lower": 0.68133438102218,
+  "cluster_ci_upper": 0.8516554608679934,
+  "member_aucs": [
+    0.7666156202143951,
+    0.7403022837738864,
+    0.7070377521805713,
+    0.755935814634796,
+    0.7221119914774619
+  ],
+  "label": "strict"
+}

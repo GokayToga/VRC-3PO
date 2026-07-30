@@ -1,0 +1,56 @@
+{
+  "alignment": {
+    "rebuilt_windows": 6442,
+    "single_task_test_windows": 768,
+    "model_auc_on_rebuilt_index": 0.756947866036354,
+    "frozen_pooled_auc": 0.756947866036354,
+    "aligned": true
+  },
+  "clock_alone": {
+    "all_sources_test": 0.6822265264711308,
+    "single_task_test": 0.5638924029562554
+  },
+  "blend_auc_by_clock_weight": {
+    "0.0": 0.756947866036354,
+    "0.1": 0.7670816965177442,
+    "0.2": 0.7752646647579733,
+    "0.3": 0.7771422864371795,
+    "0.4": 0.7682602037419269,
+    "0.5": 0.7410946134895798,
+    "1.0": 0.5638924029562554
+  },
+  "headroom": 0.02019442040082553,
+  "per_participant": {
+    "simulations_2.0": {
+      "windows": 125,
+      "prevalence": 0.04,
+      "model_auc": 0.7266666666666667,
+      "clock_auc": 0.9166666666666666
+    },
+    "simulations_24.0": {
+      "windows": 45,
+      "prevalence": 0.6,
+      "model_auc": 0.9979423868312757,
+      "clock_auc": 0.6666666666666666
+    },
+    "simulations_4.0": {
+      "windows": 125,
+      "prevalence": 0.176,
+      "model_auc": 0.8733451015004413,
+      "clock_auc": 0.5728155339805825
+    },
+    "terrain_104.0": {
+      "windows": 57,
+      "prevalence": 0.42105263157894735,
+      "model_auc": 0.6300505050505051,
+      "clock_auc": 0.8636363636363636
+    },
+    "terrain_114.0": {
+      "windows": 57,
+      "prevalence": 0.6491228070175439,
+      "model_auc": 0.5391891891891892,
+      "clock_auc": 0.8567567567567568
+    }
+  },
+  "model_clock_correlation_across_participants": -0.7618382863922241
+}

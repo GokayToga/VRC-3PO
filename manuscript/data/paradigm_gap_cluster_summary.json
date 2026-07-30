@@ -1,0 +1,8 @@
+{
+  "cnn_three_seed_score_ensemble_single_task_auc": 0.776909248285505,
+  "cnn_three_seed_score_ensemble_active_maze_auc": 0.5071257097130663,
+  "auc_difference_single_task_minus_active": 0.26978353857243875,
+  "participant_cluster_bootstrap_valid_draws": 4979,
+  "participant_cluster_bootstrap_difference_ci_lower": -0.07172408413809804,
+  "participant_cluster_bootstrap_difference_ci_upper": 0.6102684213008693
+}

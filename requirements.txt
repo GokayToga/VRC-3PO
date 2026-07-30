@@ -1,0 +1,12 @@
+# Analysis and figure generation (CPU only).
+matplotlib==3.11.1
+numpy==2.5.1
+pandas==2.2.3
+scikit-learn==1.9.0
+scipy==1.18.0
+pytest==8.4.2
+
+# Training. Installed by Colab for the GPU jobs; pinned here for the record.
+# tensorflow==2.20.0
+# keras==3.13.2
+# keras-tcn==3.5.6

@@ -1,0 +1,37 @@
+{
+  "all_windows": 6442,
+  "retained_windows": 5277,
+  "excluded_boundary_or_purge_windows": 1165,
+  "by_split": {
+    "test": {
+      "windows": 843,
+      "participants": 84,
+      "sessions": 217,
+      "by_source_windows": {
+        "maze": 376,
+        "simulations": 341,
+        "terrain": 126
+      }
+    },
+    "train": {
+      "windows": 3687,
+      "participants": 84,
+      "sessions": 219,
+      "by_source_windows": {
+        "simulations": 1669,
+        "maze": 1325,
+        "terrain": 693
+      }
+    },
+    "validation": {
+      "windows": 747,
+      "participants": 84,
+      "sessions": 216,
+      "by_source_windows": {
+        "maze": 345,
+        "simulations": 276,
+        "terrain": 126
+      }
+    }
+  }
+}

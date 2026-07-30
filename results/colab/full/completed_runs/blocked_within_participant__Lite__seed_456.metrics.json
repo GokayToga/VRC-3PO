@@ -1,0 +1,12 @@
+{
+  "protocol": "blocked_within_participant",
+  "variant": "Lite",
+  "seed": 456,
+  "parameters": 10385,
+  "test_windows": 843,
+  "r2": 0.052734315395355225,
+  "mse": 3.3354969024658203,
+  "spearman": 0.33409475301328645,
+  "qwk": 0.2055882583834524,
+  "auc": 0.6433760945649658
+}

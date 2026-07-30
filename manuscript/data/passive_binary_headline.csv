@@ -1,0 +1,2 @@
+model,protocol,participants,windows,elevated_windows,prevalence,auc,auc_ci_lower,auc_ci_upper,ci_unit,average_precision
+CNN ensemble (5 seeds),"participant-held-out, seated paradigms",9,768,115,0.1497395833,0.7569478660,0.6957014455,0.8135199775,participant cluster,0.2587584126

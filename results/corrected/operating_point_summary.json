@@ -1,0 +1,99 @@
+{
+  "n_windows": 768,
+  "n_participants": 9,
+  "elevated_windows": 115,
+  "prevalence": 0.14973958333333334,
+  "pooled_auc": 0.756947866036354,
+  "average_precision": 0.25875841263246646,
+  "calibration": {
+    "brier_score": 0.2309382106088922,
+    "mean_predicted_probability": 0.48851966857910156,
+    "observed_prevalence": 0.14973958333333334,
+    "expected_calibration_error": 0.33878006661931676,
+    "score_minimum": 0.19812938570976257,
+    "score_maximum": 0.7898316383361816
+  },
+  "operating_points": {
+    "default_half": {
+      "threshold": 0.5,
+      "sensitivity": 0.8956521739130435,
+      "specificity": 0.5176110260336907,
+      "false_alarm_rate": 0.48238897396630936,
+      "precision": 0.24641148325358853,
+      "alert_rate": 0.5442708333333334,
+      "sensitivity_ci": [
+        0.8460600375234522,
+        0.9387755102040817
+      ],
+      "specificity_ci": [
+        0.3426124197002141,
+        0.6408084499887108
+      ],
+      "false_alarm_ci": [
+        0.3591915500112892,
+        0.6573875802997858
+      ]
+    },
+    "youden": {
+      "threshold": 0.528842568397522,
+      "sensitivity": 0.8260869565217391,
+      "specificity": 0.6263399693721287,
+      "false_alarm_rate": 0.37366003062787134,
+      "precision": 0.28023598820059,
+      "alert_rate": 0.44140625,
+      "sensitivity_ci": [
+        0.7534246575342466,
+        0.8918918918918919
+      ],
+      "specificity_ci": [
+        0.49713707576270477,
+        0.7179452166998964
+      ],
+      "false_alarm_ci": [
+        0.2820547833001035,
+        0.5028629242372952
+      ]
+    },
+    "specificity_90": {
+      "threshold": 0.6441683769226074,
+      "sensitivity": 0.1826086956521739,
+      "specificity": 0.900459418070444,
+      "false_alarm_rate": 0.0995405819295559,
+      "precision": 0.2441860465116279,
+      "alert_rate": 0.11197916666666667,
+      "sensitivity_ci": [
+        0.12244897959183673,
+        0.26548672566371684
+      ],
+      "specificity_ci": [
+        0.874559915164369,
+        0.9429522483810445
+      ],
+      "false_alarm_ci": [
+        0.057047751618955395,
+        0.12544008483563096
+      ]
+    },
+    "sensitivity_80": {
+      "threshold": 0.5312358736991882,
+      "sensitivity": 0.8,
+      "specificity": 0.6294027565084227,
+      "false_alarm_rate": 0.37059724349157736,
+      "precision": 0.2754491017964072,
+      "alert_rate": 0.4348958333333333,
+      "sensitivity_ci": [
+        0.6965058750773037,
+        0.8589743589743589
+      ],
+      "specificity_ci": [
+        0.504524886877828,
+        0.719550105411397
+      ],
+      "false_alarm_ci": [
+        0.28044989458860303,
+        0.49547511312217196
+      ]
+    }
+  },
+  "bootstrap_seed": 42
+}

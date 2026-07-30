@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software or the archived results, please cite the article below."
+title: "VRC-3PO: analysis code and frozen results for a cross-participant cybersickness detection benchmark"
+authors:
+  - family-names: "Toga"
+    given-names: "Gokay"
+  - family-names: "Capin"
+    given-names: "Tolga"
+version: 1.1.0
+date-released: 2026-07-28
+license: MIT
+repository-code: "https://github.com/GokayToga/VRC-3PO"
+preferred-citation:
+  type: article
+  title: "VRC-3PO: A Cross-Participant Temporal Benchmark for Cybersickness Detection From Eye and Head Tracking Across Three VR Settings"
+  authors:
+    - family-names: "Toga"
+      given-names: "Gokay"
+    - family-names: "Capin"
+      given-names: "Tolga"
+  journal: "IEEE Access"
+  year: 2026
+  notes: "Submitted. Update volume, pages and DOI on acceptance."

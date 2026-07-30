@@ -1,0 +1,185 @@
+{
+  "n_windows": 768,
+  "n_elevated": 115,
+  "n_participants": 9,
+  "replicates": 5000,
+  "pooled_auc": {
+    "window": 0.7645648844796591,
+    "window_clock": 0.7198348758239563,
+    "session": 0.7505825953791864,
+    "session_shuffled": 0.6983154670750383,
+    "session_prefix_2": 0.7395831946201478,
+    "session_prefix_3": 0.766628936680205,
+    "session_prefix_5": 0.7626473134030228
+  },
+  "paired_comparisons": {
+    "window - window_clock": {
+      "difference": 0.04473000865570276,
+      "lower": 0.020172656800563793,
+      "upper": 0.07263299419326076,
+      "excludes_zero": true,
+      "fraction_favouring_a": 1.0,
+      "replicates": 4996
+    },
+    "window - session": {
+      "difference": 0.013982289100472722,
+      "lower": -0.020246108241407282,
+      "upper": 0.0427893649751241,
+      "excludes_zero": false,
+      "fraction_favouring_a": 0.794035228182546,
+      "replicates": 4996
+    },
+    "window - session_shuffled": {
+      "difference": 0.06624941740462076,
+      "lower": 0.025643977132316143,
+      "upper": 0.13794056750043127,
+      "excludes_zero": true,
+      "fraction_favouring_a": 0.9997998398718975,
+      "replicates": 4996
+    },
+    "window - session_prefix_2": {
+      "difference": 0.024981689859511325,
+      "lower": -0.011405884036246483,
+      "upper": 0.08410976565618168,
+      "excludes_zero": false,
+      "fraction_favouring_a": 0.8789031224979984,
+      "replicates": 4996
+    },
+    "window - session_prefix_3": {
+      "difference": -0.0020640522005459516,
+      "lower": -0.03714938251869766,
+      "upper": 0.04736250686565119,
+      "excludes_zero": false,
+      "fraction_favouring_a": 0.4567654123298639,
+      "replicates": 4996
+    },
+    "window - session_prefix_5": {
+      "difference": 0.0019175710766362597,
+      "lower": -0.023770554608450317,
+      "upper": 0.04038435291123357,
+      "excludes_zero": false,
+      "fraction_favouring_a": 0.47137710168134506,
+      "replicates": 4996
+    },
+    "window_clock - session": {
+      "difference": -0.030747719555230035,
+      "lower": -0.06787113728512538,
+      "upper": -0.00486957167032219,
+      "excludes_zero": true,
+      "fraction_favouring_a": 0.010808646917534028,
+      "replicates": 4996
+    },
+    "window_clock - session_shuffled": {
+      "difference": 0.021519408748918,
+      "lower": -0.028809640963326458,
+      "upper": 0.09158784624818754,
+      "excludes_zero": false,
+      "fraction_favouring_a": 0.7902321857485989,
+      "replicates": 4996
+    },
+    "window_clock - session_prefix_2": {
+      "difference": -0.019748318796191433,
+      "lower": -0.06109943149305902,
+      "upper": 0.0352125850213942,
+      "excludes_zero": false,
+      "fraction_favouring_a": 0.20356285028022417,
+      "replicates": 4996
+    },
+    "window_clock - session_prefix_3": {
+      "difference": -0.04679406085624871,
+      "lower": -0.08644867486433538,
+      "upper": 0.0003865730300882664,
+      "excludes_zero": false,
+      "fraction_favouring_a": 0.025820656525220177,
+      "replicates": 4996
+    },
+    "window_clock - session_prefix_5": {
+      "difference": -0.0428124375790665,
+      "lower": -0.0765051496509297,
+      "upper": -0.005193277286213285,
+      "excludes_zero": true,
+      "fraction_favouring_a": 0.01321056845476381,
+      "replicates": 4996
+    },
+    "session - session_shuffled": {
+      "difference": 0.052267128304148036,
+      "lower": 0.005929836189754845,
+      "upper": 0.12384323740639151,
+      "excludes_zero": true,
+      "fraction_favouring_a": 0.9851881505204163,
+      "replicates": 4996
+    },
+    "session - session_prefix_2": {
+      "difference": 0.010999400759038602,
+      "lower": -0.02835254480138147,
+      "upper": 0.07242626952538313,
+      "excludes_zero": false,
+      "fraction_favouring_a": 0.6865492393915132,
+      "replicates": 4996
+    },
+    "session - session_prefix_3": {
+      "difference": -0.016046341301018674,
+      "lower": -0.05762142553413163,
+      "upper": 0.03853919690957555,
+      "excludes_zero": false,
+      "fraction_favouring_a": 0.2702161729383507,
+      "replicates": 4996
+    },
+    "session - session_prefix_5": {
+      "difference": -0.012064718023836463,
+      "lower": -0.03785613039188604,
+      "upper": 0.018269601214723263,
+      "excludes_zero": false,
+      "fraction_favouring_a": 0.22477982385908726,
+      "replicates": 4996
+    },
+    "session_shuffled - session_prefix_2": {
+      "difference": -0.041267727545109434,
+      "lower": -0.0790916744408291,
+      "upper": -0.010575865139173857,
+      "excludes_zero": true,
+      "fraction_favouring_a": 0.0038030424339471577,
+      "replicates": 4996
+    },
+    "session_shuffled - session_prefix_3": {
+      "difference": -0.06831346960516671,
+      "lower": -0.11235070018868169,
+      "upper": -0.02968046812270543,
+      "excludes_zero": true,
+      "fraction_favouring_a": 0.00020016012810248197,
+      "replicates": 4996
+    },
+    "session_shuffled - session_prefix_5": {
+      "difference": -0.0643318463279845,
+      "lower": -0.11785367365806593,
+      "upper": -0.028712313202768153,
+      "excludes_zero": true,
+      "fraction_favouring_a": 0.0,
+      "replicates": 4996
+    },
+    "session_prefix_2 - session_prefix_3": {
+      "difference": -0.027045742060057276,
+      "lower": -0.048803788848913565,
+      "upper": -0.007668129111186264,
+      "excludes_zero": true,
+      "fraction_favouring_a": 0.0034027221777421937,
+      "replicates": 4996
+    },
+    "session_prefix_2 - session_prefix_5": {
+      "difference": -0.023064118782875065,
+      "lower": -0.05956170783829094,
+      "upper": -0.003621570910973093,
+      "excludes_zero": true,
+      "fraction_favouring_a": 0.006204963971176942,
+      "replicates": 4996
+    },
+    "session_prefix_3 - session_prefix_5": {
+      "difference": 0.003981623277182211,
+      "lower": -0.029050877310375492,
+      "upper": 0.03330390305878643,
+      "excludes_zero": false,
+      "fraction_favouring_a": 0.5554443554843875,
+      "replicates": 4996
+    }
+  }
+}

@@ -1,0 +1,46 @@
+# Source recordings are not redistributed. See README "Data access".
+vrc3po_master_dataset_fixed.csv
+*.csv.gz
+
+# Exploratory notebooks: superseded evaluation protocols, not part of the archive.
+VRC_3PO-3.ipynb
+VRC_3PO*.ipynb
+!VRC3PO_Camera_Ready_Retrain.ipynb
+!VRC3PO_Composition_Robustness.ipynb
+!VRC3PO_Session_Scale_Temporality.ipynb
+
+# Prior submissions and working bundles
+*_CGI.pdf
+vrc3po_*bundle*.zip
+vrc3po_ieee_access_working_bundle*.zip
+release_v*/
+
+# Caches and build products
+__pycache__/
+*.py[cod]
+.python_deps/
+tmp/
+window_cache.npz
+.DS_Store
+MPLCONFIGDIR/
+
+# LaTeX build products
+*.aux
+*.log
+*.blg
+*.out
+*.synctex.gz
+missfont.log
+
+# Raw source recordings: use rights only, never redistributed.
+utsa_eye_head_cybersickness_datasets/
+raw/
+
+# Internal submission QA notes: editorial history and review correspondence,
+# not part of the reproducibility record. See results/ARTIFACT_MANIFEST.md and
+# DATA_DICTIONARY.md for what a reproducer needs.
+manuscript/submission_checklist.md
+
+# The manuscript itself is not self-archived here. The article is available
+# through IEEE Access; this archive holds the code and the frozen results.
+manuscript/*.pdf

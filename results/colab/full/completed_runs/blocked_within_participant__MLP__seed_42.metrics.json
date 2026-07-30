@@ -1,0 +1,12 @@
+{
+  "protocol": "blocked_within_participant",
+  "variant": "MLP",
+  "seed": 42,
+  "parameters": 3569,
+  "test_windows": 843,
+  "r2": 0.13175469636917114,
+  "mse": 3.0572516918182373,
+  "spearman": 0.4324772451922595,
+  "qwk": 0.2856636447139328,
+  "auc": 0.693337963530389
+}

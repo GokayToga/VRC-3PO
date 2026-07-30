@@ -1,0 +1,18 @@
+{
+  "n_compositions_attempted": 20,
+  "n_compositions_complete": 20,
+  "mean_auc": 0.6305100467171025,
+  "sd_auc": 0.08260626509924585,
+  "median_auc": 0.647406563431405,
+  "min_auc": 0.4680973170181803,
+  "max_auc": 0.7477806671449068,
+  "range_auc": 0.27968335012672646,
+  "n_with_ci_above_chance": 8,
+  "n_with_point_estimate_above_chance": 18,
+  "frozen_split_auc": 0.756947866036354,
+  "frozen_split_percentile": 100.0,
+  "n_compositions_below_frozen": 20,
+  "mean_test_participants": 9.0,
+  "protocol_version": 2,
+  "note": "Compositions share one pool of 84 participants and are therefore dependent. Report the distribution; do not apply a one-sample test against 0.5 and do not describe the compositions as independent."
+}

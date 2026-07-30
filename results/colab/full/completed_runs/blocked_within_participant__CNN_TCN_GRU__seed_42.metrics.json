@@ -1,0 +1,12 @@
+{
+  "protocol": "blocked_within_participant",
+  "variant": "CNN+TCN+GRU",
+  "seed": 42,
+  "parameters": 130865,
+  "test_windows": 843,
+  "r2": 0.014912843704223633,
+  "mse": 3.4686734676361084,
+  "spearman": 0.3703437331712492,
+  "qwk": 0.22458999591978024,
+  "auc": 0.6612261851261728
+}

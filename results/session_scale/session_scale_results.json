@@ -1,0 +1,140 @@
+{
+  "protocol_version": 3,
+  "frozen_pooled_auc": 0.756947866036354,
+  "alignment_guard_passed": true,
+  "ensemble_seeds": [
+    42,
+    123,
+    456,
+    789,
+    2024
+  ],
+  "results": [
+    {
+      "condition": "window",
+      "protocol_version": 3,
+      "session_context": false,
+      "clock_feature": false,
+      "shuffled": false,
+      "prefix_k": null,
+      "test_windows": 768,
+      "elevated": 115,
+      "participants": 9,
+      "pooled_auc": 0.7645648844796591,
+      "cluster_ci": {
+        "lower": 0.709550627256286,
+        "upper": 0.8198010117573542,
+        "replicates": 4996
+      },
+      "minutes": 8.5
+    },
+    {
+      "condition": "window_clock",
+      "protocol_version": 3,
+      "session_context": false,
+      "clock_feature": true,
+      "shuffled": false,
+      "prefix_k": null,
+      "test_windows": 768,
+      "elevated": 115,
+      "participants": 9,
+      "pooled_auc": 0.7198348758239563,
+      "cluster_ci": {
+        "lower": 0.6701981038826238,
+        "upper": 0.7752698962519087,
+        "replicates": 4996
+      },
+      "minutes": 8.4
+    },
+    {
+      "condition": "session",
+      "protocol_version": 3,
+      "session_context": true,
+      "clock_feature": false,
+      "shuffled": false,
+      "prefix_k": null,
+      "test_windows": 768,
+      "elevated": 115,
+      "participants": 9,
+      "pooled_auc": 0.7505825953791864,
+      "cluster_ci": {
+        "lower": 0.6972172345888384,
+        "upper": 0.8044474051676217,
+        "replicates": 4996
+      },
+      "minutes": 3.3
+    },
+    {
+      "condition": "session_shuffled",
+      "protocol_version": 3,
+      "session_context": true,
+      "clock_feature": false,
+      "shuffled": true,
+      "prefix_k": null,
+      "test_windows": 768,
+      "elevated": 115,
+      "participants": 9,
+      "pooled_auc": 0.6983154670750383,
+      "cluster_ci": {
+        "lower": 0.6076715044652261,
+        "upper": 0.7722841100576796,
+        "replicates": 4996
+      },
+      "minutes": 3.3
+    },
+    {
+      "condition": "session_prefix_2",
+      "protocol_version": 3,
+      "session_context": true,
+      "clock_feature": false,
+      "shuffled": false,
+      "prefix_k": 2,
+      "test_windows": 768,
+      "elevated": 115,
+      "participants": 9,
+      "pooled_auc": 0.7395831946201478,
+      "cluster_ci": {
+        "lower": 0.6564589457498676,
+        "upper": 0.8084458360669057,
+        "replicates": 4996
+      },
+      "minutes": 4.2
+    },
+    {
+      "condition": "session_prefix_3",
+      "protocol_version": 3,
+      "session_context": true,
+      "clock_feature": false,
+      "shuffled": false,
+      "prefix_k": 3,
+      "test_windows": 768,
+      "elevated": 115,
+      "participants": 9,
+      "pooled_auc": 0.766628936680205,
+      "cluster_ci": {
+        "lower": 0.6958278541101263,
+        "upper": 0.8242996465252427,
+        "replicates": 4996
+      },
+      "minutes": 3.5
+    },
+    {
+      "condition": "session_prefix_5",
+      "protocol_version": 3,
+      "session_context": true,
+      "clock_feature": false,
+      "shuffled": false,
+      "prefix_k": 5,
+      "test_windows": 768,
+      "elevated": 115,
+      "participants": 9,
+      "pooled_auc": 0.7626473134030228,
+      "cluster_ci": {
+        "lower": 0.6886032309326238,
+        "upper": 0.82721009566312,
+        "replicates": 4996
+      },
+      "minutes": 2.8
+    }
+  ]
+}

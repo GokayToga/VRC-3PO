@@ -1,0 +1,50 @@
+[
+  {
+    "comparison": "window_clock - window",
+    "difference": -0.04473000865570276,
+    "lower": -0.07263299419326076,
+    "upper": -0.020172656800563793,
+    "fraction_favouring_a": 0.0,
+    "replicates": 4996
+  },
+  {
+    "comparison": "session - window",
+    "difference": -0.013982289100472722,
+    "lower": -0.0427893649751241,
+    "upper": 0.020246108241407282,
+    "fraction_favouring_a": 0.205564451561249,
+    "replicates": 4996
+  },
+  {
+    "comparison": "session_shuffled - window",
+    "difference": -0.06624941740462076,
+    "lower": -0.13794056750043127,
+    "upper": -0.025643977132316143,
+    "fraction_favouring_a": 0.00020016012810248197,
+    "replicates": 4996
+  },
+  {
+    "comparison": "session_prefix_2 - window",
+    "difference": -0.024981689859511325,
+    "lower": -0.08410976565618168,
+    "upper": 0.011405884036246483,
+    "fraction_favouring_a": 0.12069655724579664,
+    "replicates": 4996
+  },
+  {
+    "comparison": "session_prefix_3 - window",
+    "difference": 0.0020640522005459516,
+    "lower": -0.04736250686565119,
+    "upper": 0.03714938251869766,
+    "fraction_favouring_a": 0.5432345876701361,
+    "replicates": 4996
+  },
+  {
+    "comparison": "session_prefix_5 - window",
+    "difference": -0.0019175710766362597,
+    "lower": -0.04038435291123357,
+    "upper": 0.023770554608450317,
+    "fraction_favouring_a": 0.5284227381905524,
+    "replicates": 4996
+  }
+]

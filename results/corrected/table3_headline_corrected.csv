@@ -1,0 +1,2 @@
+model,protocol,participants,windows,elevated_windows,auc,auc_ci_lower,auc_ci_upper,ci_unit,average_precision
+CNN ensemble (5 seeds),"participant-level, passive paradigms",9,768,115,0.756947866036354,0.6957014454520861,0.8135199774520145,participant cluster,0.25875841263246646
