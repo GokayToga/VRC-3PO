@@ -1,0 +1,81 @@
+{
+  "composition_seed": 3,
+  "protocol_version": 2,
+  "status": "complete",
+  "train_windows": 2922,
+  "validation_windows": 370,
+  "test_participants": 9,
+  "test_windows": 847,
+  "elevated_windows": 117,
+  "prevalence": 0.1381345926800472,
+  "pooled_auc": 0.675916169066854,
+  "average_precision": 0.22779954349693593,
+  "cluster_ci_lower": 0.5330153579882984,
+  "cluster_ci_upper": 0.835687888724974,
+  "cluster_replicates": 4996,
+  "member_aucs": [
+    0.7161105256995668,
+    0.6095070834796862,
+    0.6492214026460602,
+    0.6471022128556375,
+    0.6609062170706006
+  ],
+  "per_participant": [
+    {
+      "participant_id": "simulations_1.0",
+      "windows": 135,
+      "elevated": 0,
+      "auc": NaN
+    },
+    {
+      "participant_id": "simulations_10.0",
+      "windows": 109,
+      "elevated": 30,
+      "auc": 0.5561181434599156
+    },
+    {
+      "participant_id": "simulations_16.0",
+      "windows": 135,
+      "elevated": 0,
+      "auc": NaN
+    },
+    {
+      "participant_id": "simulations_21.0",
+      "windows": 123,
+      "elevated": 3,
+      "auc": 0.8777777777777778
+    },
+    {
+      "participant_id": "simulations_9.0",
+      "windows": 136,
+      "elevated": 55,
+      "auc": 0.7739618406285073
+    },
+    {
+      "participant_id": "terrain_104.0",
+      "windows": 57,
+      "elevated": 24,
+      "auc": 0.6477272727272727
+    },
+    {
+      "participant_id": "terrain_110.0",
+      "windows": 57,
+      "elevated": 0,
+      "auc": NaN
+    },
+    {
+      "participant_id": "terrain_111.0",
+      "windows": 38,
+      "elevated": 0,
+      "auc": NaN
+    },
+    {
+      "participant_id": "terrain_117.0",
+      "windows": 57,
+      "elevated": 5,
+      "auc": 0.6038461538461538
+    }
+  ],
+  "train_participants": 59,
+  "validation_participants": 8
+}

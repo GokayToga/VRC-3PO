@@ -92,3 +92,22 @@ comparing before concluding a mismatch.
 Windowing, normalization and the split protocols are implemented in
 `analysis/composition_robustness.py` and `analysis/retrain_camera_ready.py`;
 read those rather than reimplementing from this description.
+
+## Benchmark v1.1 (first revision)
+
+The revised article uses the table written by `analysis/benchmark_v11.py`
+(`vrc3po_benchmark_v1_1.csv`, not redistributed). It adds a `recording_id`
+column, masks invalid eye samples at the native sampling rate, applies a
+1.0 mm pupil floor to Terrain, and removes duplicated recordings. Its manifest
+is `results/revision/benchmark_v1_1/vrc3po_benchmark_v1_1.manifest.json`.
+
+| Source | Rows | Participants | Windows (30 s, 15 s stride, per recording) | Elevated windows |
+|---|---:|---:|---:|---:|
+| maze | 34,764 | 37 | 2,262 | 598 (26.4%) |
+| simulations | 46,703 | 25 | 2,980 | 410 (13.8%) |
+| terrain | 18,300 | 22 | 1,159 | 244 (21.1%) |
+| **total** | **99,767** | **84** | **6,401** | **1,252** (19.6%) |
+
+221 recordings. Simulations native-rate masking removed 5.64% (left) and
+5.98% (right) of eye samples; 226 left and 157 right Terrain pupil values fell
+below the floor.

@@ -1,0 +1,11 @@
+{
+  "benchmark": "v1.1",
+  "source": "architecture_test_predictions.csv (participant protocol, CNN, 3 seeds averaged)",
+  "procedure": "generate_ieee_figures.figure_paradigm_gap, rng seed 20240724, 5000 participant-cluster draws",
+  "cnn_three_seed_score_ensemble_single_task_auc": 0.7973803319160608,
+  "cnn_three_seed_score_ensemble_active_maze_auc": 0.4831574134054795,
+  "auc_difference_single_task_minus_active": 0.3142229185105813,
+  "participant_cluster_bootstrap_valid_draws": 4979,
+  "participant_cluster_bootstrap_difference_ci_lower": -0.022503332208081334,
+  "participant_cluster_bootstrap_difference_ci_upper": 0.6469300811503808
+}

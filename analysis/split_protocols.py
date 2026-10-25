@@ -13,6 +13,10 @@ import pandas as pd
 from analysis.corrected_evaluation import build_window_metadata
 
 
+def _session_keys(metadata: pd.DataFrame) -> list[str]:
+    return ["recording_id"] if "recording_id" in metadata.columns else ["participant_id", "condition"]
+
+
 def chronological_purged_split(
     metadata: pd.DataFrame,
     train_fraction: float = 0.60,
@@ -33,7 +37,7 @@ def chronological_purged_split(
         raise ValueError("purge_samples must be non-negative.")
 
     assignment = pd.Series("excluded", index=metadata.index, dtype="object")
-    grouped = metadata.groupby(["participant_id", "condition"], sort=False)
+    grouped = metadata.groupby(_session_keys(metadata), sort=False)
     for _, session in grouped:
         session_end = int(session["end_index"].max())
         train_boundary = int(np.floor(session_end * train_fraction))
@@ -58,9 +62,7 @@ def assert_no_interval_overlap(metadata: pd.DataFrame, assignment: pd.Series) ->
     """Raise if raw sample intervals overlap across retained split labels."""
     retained = metadata.assign(split=assignment)
     retained = retained[retained["split"].isin(["train", "validation", "test"])]
-    for session_key, session in retained.groupby(
-        ["participant_id", "condition"], sort=False
-    ):
+    for session_key, session in retained.groupby(_session_keys(metadata), sort=False):
         intervals: dict[str, list[tuple[int, int]]] = {}
         for split, split_rows in session.groupby("split"):
             intervals[split] = list(

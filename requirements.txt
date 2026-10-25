@@ -10,3 +10,4 @@ pytest==8.4.2
 # tensorflow==2.20.0
 # keras==3.13.2
 # keras-tcn==3.5.6
+# interpret-core   (TruVR boosting model, revision R1d)

@@ -144,3 +144,77 @@ ordering before reporting anything: the rebuilt single-task test set must
 reproduce pooled AUC 0.756948 under the frozen predictions. The notebook
 additionally asserts that every condition lands on identical label and
 participant vectors, which is what makes the paired comparison valid.
+
+
+## First revision (benchmark v1.1)
+
+Added 25 October 2026. Provenance and table mapping in `revision/README.md`.
+
+| Artifact | SHA-256 |
+|---|---|
+| `revision/architecture_v1_1/architecture_seed_metrics.csv` | `7fe5174f00ef6d42f2526d86d8c5818af964447db2e16706b3f6c63a1003af5a` |
+| `revision/architecture_v1_1/architecture_summary.csv` | `53df5dad27163adb05fc5be348591ae559a3755d576ceacc351bad1ac52e3963` |
+| `revision/architecture_v1_1/architecture_test_predictions.csv` | `469de0bcd9919ce9e0f48b6bd729adfa033393cdfffa778f503b1af67a6921f3` |
+| `revision/architecture_v1_1/protocol_manifest.json` | `0f887f8e7b17d72d292b2bca3703f2d759f24eb1666f45fb233b6b9bce9f6a57` |
+| `revision/architecture_v1_1/table4_protocol_comparison.csv` | `ee732e597bf450f45b6db24d9f72e82269dddc033f3d37d4b07df99fd67a56b6` |
+| `revision/architecture_v1_1/table5_architecture_ablation.csv` | `4825812c08b790d358bdc93b71eed7b33674d9415b19a92f930d8aa6b1929e6d` |
+| `revision/benchmark_v1_1/vrc3po_benchmark_v1_1.manifest.json` | `457ddec4fd3b20e5a1c6044147f76933cff1f11526ed44fa0c58ce29635ff995` |
+| `revision/composition_v1_1/composition_000.json` | `5ee5115bae12150e16920919f0fcae4fc7a27c89b78c0b58daf920bf536a6977` |
+| `revision/composition_v1_1/composition_001.json` | `a4411ab88051618b93377bda9611bf7d7f29f6eecae2e2d6c7ead14213bcccd0` |
+| `revision/composition_v1_1/composition_002.json` | `9f4552a0f722dbf0fb89adfe7e732115888d465792de2ebf585ecf0d13af8584` |
+| `revision/composition_v1_1/composition_003.json` | `aadb346b04961216b110414647532ae2679be2c7e8d3bfccf4dab8a00b44107d` |
+| `revision/composition_v1_1/composition_004.json` | `53f02e22c773b2a696ae786143441436bd302926621761dd4ddde54ec043de19` |
+| `revision/composition_v1_1/composition_005.json` | `28ea4c86d623b49a9a75e229709ebdd7ed8242e038ef583e65a71c76525523df` |
+| `revision/composition_v1_1/composition_006.json` | `729d2c818a6b0281095413bcb503bac954899cfbccbc1beca23820735c9ada4c` |
+| `revision/composition_v1_1/composition_007.json` | `4e43d7857eb765d13e940e8fca7f09f64b33b76e03ecf3d3b5ee2f3d14092b41` |
+| `revision/composition_v1_1/composition_008.json` | `eacc7d30e098fb06027285a6f71357983f1b764af6f66083f419ef6ee834e6b4` |
+| `revision/composition_v1_1/composition_009.json` | `513f07273ecd3fa73f268734296a47acded78b2244b73e1eff893fb8fc243261` |
+| `revision/composition_v1_1/composition_010.json` | `c435ddfe26b9893f120e5c399e688050a861c6f08ba118b642badc5e1c3e6315` |
+| `revision/composition_v1_1/composition_011.json` | `5a5befcdadf082fb30da2ce7b16cb41d558ad02dbc593b5b8f8bb6dbe88418e1` |
+| `revision/composition_v1_1/composition_012.json` | `f36e28532cdb181a536fa4507ff8b70326cfe054bb4ea3f5ea292204bc38a16e` |
+| `revision/composition_v1_1/composition_013.json` | `656516af164a70808db35761f347b2c3097f1222af1717d0b9a7aedd9f76bb1b` |
+| `revision/composition_v1_1/composition_014.json` | `e0e082fd8303027514b20bfef15779b78e717268f505eab948ec5837efd32b8f` |
+| `revision/composition_v1_1/composition_015.json` | `baec510163773019e7e18838d78345ee6d8871adbde987168811826ad03a9138` |
+| `revision/composition_v1_1/composition_016.json` | `52d93164359575642f1d27e142bc135e85ceef93c22a438dec798514ee7cfa23` |
+| `revision/composition_v1_1/composition_017.json` | `ee3e34b7a30bee363b1dd9756df79e35577819f89715cad114c71b862d2d6546` |
+| `revision/composition_v1_1/composition_018.json` | `12c3129f460e997cf36ece107214e8f7c634156542111151bdf96179c61acd87` |
+| `revision/composition_v1_1/composition_019.json` | `2707d81022e14dd134e2019252fb450fd3a3aea87fe3695531086c0aff2c18f3` |
+| `revision/composition_v1_1/composition_results.csv` | `62aafc0b28d7113dd2496d28cd13ef7e93f56c416925cff2c6cbbb49e742059e` |
+| `revision/composition_v1_1/composition_summary.json` | `3e05e2ee6108b2ff2cd213edf5d976c8030810a6931c8a4dd4f4a4cdd89472f3` |
+| `revision/paradigm_gap_v1_1/paradigm_gap_cluster_summary_v11.json` | `9ad37062ef7027ce631bfba4336f75e44394cffcdcac78c94a0f18a9153f3b9c` |
+| `revision/r1_primary_cv/environment_control.csv` | `1a739874e1cef50b97cd12fa4a8505433afe65d4bdbf346a976147b7d7b4313d` |
+| `revision/r1_primary_cv/fold_auc.csv` | `e29c58ec5484a093428240011678cb0aaedbd2775e2bfadc062f3d35711084c3` |
+| `revision/r1_primary_cv/operating_points_validation_selected.csv` | `dcdff48518cab543aeec3cd20cfb1c6fad9c251c728556d335313bd4633a4283` |
+| `revision/r1_primary_cv/paired_comparisons.csv` | `8c2fdcd5dee05a64344f47321d74852a783e1ad1b3c7ce16c7b15d201f7d313f` |
+| `revision/r1_primary_cv/per_condition_auc.csv` | `00d16674c778eda251101e7f935d8a15ecce46770f88f7f0c28cba487c8b3b17` |
+| `revision/r1_primary_cv/primary_estimates.csv` | `1a13e5862a30aca0024b874541e7bed76a8c0691f810ec51f439348315211945` |
+| `revision/r1_primary_cv/run_status.csv` | `90ad79b77cd9e8bd03da4ac17c9731d1e5b3ae5e17b8510e956bcc559a7eacb4` |
+| `revision/r1_primary_cv/variance_components.json` | `0a4194ebd7cf40dde6aea27358729df6dfbe43316cb2b97b2289318fa02eae9c` |
+| `revision/r1b_environment/environment_control.csv` | `ce469f1562f75744d7d9e1fd298b14a14ee126d8f302a33ee682e85754136e36` |
+| `revision/r1b_environment/environment_probe.csv` | `f56b937592562954a2595cd42fc30ff1598ef569d3901e6bbec5d40b800eebc3` |
+| `revision/r1b_environment/familiar_vs_unseen/familiar_vs_unseen.csv` | `9c0548a9d94b5f4811122a2289f132a3b84a4ab720f8f7a881a658b8f6aa6696` |
+| `revision/r1b_environment/familiar_vs_unseen/familiar_vs_unseen_maze.csv` | `ee130e453b915496302ab717d9be2eeefa5ccb09e20f59dd5884341edd28d396` |
+| `revision/r1b_environment/fold_auc.csv` | `90981007d7d5dc1dcb5a6ff70e06b1f04ad60613ea5be72cbb28c0683a7f7e52` |
+| `revision/r1b_environment/input_variants.csv` | `f3b1077c26bdc0d7d19322b27081b2f4501f015512747b5991069d929c9df96a` |
+| `revision/r1b_environment/operating_points_validation_selected.csv` | `a50eaad0519af4f2fb297e89a1748cd4096b5af42d7c2bac1d67ebf9ddc2259e` |
+| `revision/r1b_environment/paired_comparisons.csv` | `455426b80a11b6880a1332d80317932e01fe7fbb7422ce8f694e8760aafa6c82` |
+| `revision/r1b_environment/per_condition_auc.csv` | `0daccf6214e34b8b801092c4c750939cbd228598efc5b463cee544e336623b20` |
+| `revision/r1b_environment/primary_estimates.csv` | `a29d4d4ef338f25c3acdcafd88c774eea4dab7e8be5aed76528bea743d04acf1` |
+| `revision/r1b_environment/variance_components.json` | `cc40a6ff2ebb8a3c890acbaa5c96e7fd1f83bc3e2ba842f8af044b8073710c65` |
+| `revision/r1c_shortcut_aware/environment_control.csv` | `1a8615ab4307df7eb7e660fe5b336bdc64993f77d5baea0784ee17d945477e32` |
+| `revision/r1c_shortcut_aware/fold_auc.csv` | `e83b911eac5faab03bb12a4341cd2ec25476ea5b9e6860fa0a0e4903dc1a0ecb` |
+| `revision/r1c_shortcut_aware/input_variants.csv` | `f3b1077c26bdc0d7d19322b27081b2f4501f015512747b5991069d929c9df96a` |
+| `revision/r1c_shortcut_aware/operating_points_validation_selected.csv` | `b206f516b95d67d425e2166db3139b9a8954786571eb48769bc37855fb709574` |
+| `revision/r1c_shortcut_aware/paired_comparisons.csv` | `7639c755be80a1ff0c1a89b50a36b3448589812c7ec380cd78c5cc3bda282028` |
+| `revision/r1c_shortcut_aware/per_condition_auc.csv` | `577a23569f7781f4441b743a878cca4f3852d4380f4001752d5fdd8c2a27d221` |
+| `revision/r1c_shortcut_aware/primary_estimates.csv` | `956600903bedb3df4fdede10538623997ab6bbf72a49aaf322598d0f897c1915` |
+| `revision/r1c_shortcut_aware/variance_components.json` | `cc40a6ff2ebb8a3c890acbaa5c96e7fd1f83bc3e2ba842f8af044b8073710c65` |
+| `revision/r1d_published_detectors/environment_control.csv` | `b44b43079fff2fd02ffcb922d826781b41306122b233a30646a98f17f05e168b` |
+| `revision/r1d_published_detectors/fold_auc.csv` | `215b824f2f115ae8bf1c93e3567e7a7f09d0089303d5f21dd9e163325582e263` |
+| `revision/r1d_published_detectors/input_variants.csv` | `01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b` |
+| `revision/r1d_published_detectors/operating_points_validation_selected.csv` | `9a9ecac60636dc6b232a5a91e73eb0d0878fcbc528539f713f9407ca12c3418b` |
+| `revision/r1d_published_detectors/paired_comparisons.csv` | `036b2480004309859cdc30dc2a34c055b38400f2a1a600173f09a16e9a738498` |
+| `revision/r1d_published_detectors/per_condition_auc.csv` | `ae3925046c54eeeccc482105b079842f9b24c2855c5a722ba13ba8f46a1e6756` |
+| `revision/r1d_published_detectors/primary_estimates.csv` | `c3fd48387b723e5be644c027b0c67dd578b3d7fac370648e13d424dda67f9c63` |
+| `revision/r1d_published_detectors/regression.csv` | `fb1d5d34aeb59b61439239b7c9cf52155f9e07a7b024b69cadabe9f9d1d2583d` |
+| `revision/r1d_published_detectors/variance_components.json` | `ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356` |

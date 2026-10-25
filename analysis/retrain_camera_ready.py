@@ -52,6 +52,23 @@ FEATURE_COLUMNS = [
 WINDOW_LENGTH = 30
 WINDOW_STRIDE = 15
 DEFAULT_SEEDS = (42, 123, 456)
+# Prespecified FMS range used to clip rounded predictions before QWK.
+FMS_SCALE_MIN = 0
+FMS_SCALE_MAX = 10
+
+
+def _session_groups(df: pd.DataFrame):
+    """Yield (participant, condition, session) for every continuous recording.
+
+    Benchmark v1.1 carries ``recording_id`` and is windowed per recording, so a
+    participant-condition with two recording folders is never interleaved.
+    A v1.0 table has no such column and falls back to the published
+    participant x condition sessions, reproducing the frozen windows exactly.
+    """
+    keys = ["recording_id"] if "recording_id" in df.columns else ["global_participant_id", "condition"]
+    for _, session in df.groupby(keys, sort=False):
+        yield (session["global_participant_id"].iloc[0], session["condition"].iloc[0],
+               session.sort_values("elapsed_s").reset_index(drop=True))
 
 
 def build_windows(
@@ -60,9 +77,7 @@ def build_windows(
     features: list[np.ndarray] = []
     labels: list[float] = []
     rows: list[tuple[str, str, str, int, int]] = []
-    grouped = df.groupby(["global_participant_id", "condition"], sort=False)
-    for (participant, condition), session in grouped:
-        session = session.sort_values("elapsed_s").reset_index(drop=True)
+    for participant, condition, session in _session_groups(df):
         session_features = session[FEATURE_COLUMNS].to_numpy(dtype=np.float32)
         session_fms = session["fms"].to_numpy(dtype=np.float32)
         source = str(session["source_dataset"].iloc[0])
@@ -72,7 +87,8 @@ def build_windows(
             end = start + WINDOW_LENGTH
             features.append(session_features[start:end])
             labels.append(float(session_fms[start:end].mean()))
-            rows.append((str(participant), str(condition), source, start, end))
+            rows.append((str(participant), str(condition), source, start, end,
+                         str(session["recording_id"].iloc[0]) if "recording_id" in session else None))
     metadata = pd.DataFrame(
         rows,
         columns=[
@@ -81,8 +97,11 @@ def build_windows(
             "source_dataset",
             "start_index",
             "end_index",
+            "recording_id",
         ],
     )
+    if metadata["recording_id"].isna().all():
+        metadata = metadata.drop(columns="recording_id")
     return (
         np.stack(features).astype(np.float32),
         np.asarray(labels, dtype=np.float32),

@@ -2,7 +2,7 @@
 
 Reproducibility archive for *VRC-3PO: A Cross-Participant Temporal Benchmark for
 Cybersickness Detection From Eye and Head Tracking Across Three VR Settings*
-(submitted to IEEE Access).
+(IEEE Access, first revision).
 
 VRC-3PO names the full temporal stack the article evaluates -- convolution for
 local gaze events, dilated convolution for medium-range build-up, recurrence for
@@ -12,6 +12,55 @@ a proposal: it does not win under participant holdout.
 This archive contains the analysis code, the frozen result artifacts behind every
 number in the article, and the scripts that regenerate every table and figure. **It does not contain the source recordings** -- see Data access
 below.
+
+## Revision 1 (benchmark v1.1)
+
+The first revision of the article changes the benchmark and its primary analyses.
+Everything added for it is listed here; the first-submission material below is
+kept unchanged so that v1.0 numbers remain reproducible.
+
+- **Benchmark v1.1** (`analysis/benchmark_v11.py`) rebuilds the 1 Hz table from
+  the raw recordings with three corrections: invalid eye samples are masked at
+  the native sampling rate before binning (Maze validity flag; Simulations pupil
+  or openness < 0), Terrain pupil values below a 1.0 mm plausibility floor are
+  masked, and windows are formed per recording (`recording_id`), with
+  duplicated recordings removed. 99,767 rows, 221 recordings, 6,401 windows.
+  The manifest of removed recordings and masked values is
+  `results/revision/benchmark_v1_1/vrc3po_benchmark_v1_1.manifest.json`.
+- **Repeated participant-level cross-validation** (`analysis/revision_cv.py`,
+  `analysis/revision_common.py`): 5 x 5 stratified participant folds over the
+  47 single-task participants, participant-cluster bootstrap, validation-selected
+  operating points, sensor-free baselines (`nuisance:condition`,
+  `nuisance:condition_clock`), within-environment AUC, the increment over the
+  baselines, source-aware threshold definitions, equal-budget tuning, and input
+  variants (channel subsets, first-minute calibration).
+- **Environment probe** (`analysis/environment_probe.py`): how well each channel
+  group identifies the VR environment for unseen participants.
+- **Shortcut-aware training** (`analysis/revision_debias.py`), pre-registered in
+  `analysis/PREREGISTRATION_R1c.md` before it was run.
+- **Familiar participants and time on task** (`analysis/familiar_vs_unseen.py`):
+  person x environment prior and elapsed-time baselines.
+- **Published detectors** (`analysis/litevr.py`): re-implementations of the
+  LiteVR LSTM/GRU/MLP and the TruVR boosting model, under participant holdout and
+  under a sample-level split over windows (`--protocol windows`), plus FMS
+  regression (`litevr_reg:*`, summarized by `python -m analysis.litevr regression`).
+
+Colab notebooks, run in order on a T4 (each is resumable):
+
+```
+VRC3PO_Revision_R1.ipynb                          benchmark v1.1, primary CV, baselines,
+                                                  thresholds, tuning, architectures x folds
+VRC3PO_Revision_R1b_Environment_Shortcut.ipynb    environment probe and input variants
+VRC3PO_Revision_R1c_Shortcut_Aware_Training.ipynb pre-registered shortcut-aware training
+VRC3PO_Revision_R1d_Published_Detectors.ipynb     LiteVR and TruVR re-implementations
+VRC3PO_Revision_R1e_Matched_Comparison.ipynb      CNN ensemble and FMS regression under both protocols
+```
+
+The notebooks install the code from a zip of this repository uploaded to Google
+Drive (the "bundle"); a zip of the repository root works.
+
+Every revised number traces to `results/revision/`; see
+`results/revision/README.md` for the table-by-table map.
 
 ## What is here
 
@@ -36,6 +85,7 @@ results/sentinel_check/       A/B isolation of the pupil masking rule
 results/colab/full/           42-run architecture bundle (7 architectures x
                               2 protocols x 3 seeds), seed-level metrics and
                               per-fit predictions
+results/revision/             benchmark v1.1 and every result of the first revision
 results/ARTIFACT_MANIFEST.md  SHA-256 checksums and provenance for every
                               frozen artifact
 DATA_DICTIONARY.md            schema, per-source counts and reconstruction
@@ -199,7 +249,8 @@ python -m pytest tests/ -q
 ## Environment
 
 The reported results were produced in Google Colab on an NVIDIA T4 GPU with
-Python 3.12, TensorFlow 2.20.0, Keras 3.13.2 and keras-tcn 3.5.6. Analysis and
+Python 3.12, TensorFlow 2.20.0, Keras 3.13.2 and keras-tcn 3.5.6. The
+revision notebooks additionally install `interpret-core` for the boosting model. Analysis and
 figure scripts additionally use the versions pinned in
 `analysis/requirements-figures.txt`. Deep-learning results are not
 bit-reproducible across GPU models and library versions; seeds are fixed
