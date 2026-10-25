@@ -45,7 +45,7 @@ from analysis.corrected_evaluation import (
     average_precision,
     roc_auc,
 )
-from analysis.retrain_camera_ready import FEATURE_COLUMNS, WINDOW_LENGTH, WINDOW_STRIDE
+from analysis.retrain_camera_ready import FEATURE_COLUMNS, WINDOW_LENGTH, WINDOW_STRIDE  # noqa: E501
 
 ENSEMBLE_SEEDS = (42, 123, 456, 789, 2024)
 DEFAULT_COMPOSITIONS = 20
@@ -64,10 +64,10 @@ PROTOCOL_VERSION = 2  # v2: single-task-only train/validation/test, Masking laye
 # ---------------------------------------------------------------------------
 def build_windows(df: pd.DataFrame):
     """Same windowing rule as the frozen pipeline: 30 s windows, 15 s stride."""
+    from analysis.retrain_camera_ready import _session_groups
+
     features, labels, rows = [], [], []
-    grouped = df.groupby(["global_participant_id", "condition"], sort=False)
-    for (participant, condition), session in grouped:
-        session = session.sort_values("elapsed_s").reset_index(drop=True)
+    for participant, condition, session in _session_groups(df):
         session_features = session[FEATURE_COLUMNS].to_numpy(dtype=np.float32)
         session_fms = session["fms"].to_numpy(dtype=np.float32)
         source = str(session["source_dataset"].iloc[0])

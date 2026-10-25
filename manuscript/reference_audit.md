@@ -114,3 +114,28 @@ study. It does not provide an ethics committee name or approval identifier in
 the public text checked for this audit, so the manuscript does not invent
 one. Before submission, the repository record should still preserve the exact
 SAVELab archive URL, archive version, reuse terms, and file manifest.
+
+## Fourth pass — 30 July 2026
+
+Triggered by a completeness check rather than a suspicion: cross-referencing
+`references.bib` against this file showed that every entry had been audited
+except one.
+
+- `kelly2024` had never been audited. It entered the bibliography late, when a
+  wording change in the Introduction orphaned it and it was re-cited on the
+  mitigation sentence, after the first three audit rounds had finished.
+  **Corrected: the second author is Taylor A. Doty, not "Thomas A. Doty."**
+  Verified against two independent sources — the indexed record for
+  IEEE TVCG vol. 31, no. 9, pp. 5704--5712 (DOI 10.1109/TVCG.2024.3470214), and
+  the author's institutional affiliation at Iowa State University, where Taylor
+  A. Doty publishes on cybersickness with Kelly, Gilbert and Dorneich. Venue,
+  volume, issue, page range, year and DOI were all correct as recorded.
+
+Note on the year field: the citation key says 2024 and the `year` field says
+2025. Both are right. The article appeared in IEEE early access in 2024 under
+DOI 10.1109/TVCG.2024.3470214 and was assigned to the September 2025 issue.
+The `year` field follows the issue of record.
+
+Standing rule: any reference added after an audit round must be audited before
+submission. A key that appears in `references.bib` but not in this file has not
+been checked.

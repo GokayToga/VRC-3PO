@@ -1,0 +1,48 @@
+{
+  "fms_gt2__classifier_architectures": {
+    "n_compositions": 20,
+    "n_models": 5,
+    "models": [
+      "clf:CNN",
+      "clf:CNN+TCN",
+      "clf:MLP",
+      "clf:VRC-3PO",
+      "cnn_ensemble"
+    ],
+    "var_composition": 0.00785066035907596,
+    "var_model": 0.0004009781253788753,
+    "var_residual": 0.0011207946378031096,
+    "share_composition": 0.8376331158268783,
+    "share_model": 0.04278271396000895,
+    "share_residual": 0.11958417021311271,
+    "range_across_compositions_mean": 0.349393020461547,
+    "range_across_models_mean": 0.05286837757979024,
+    "model_means": {
+      "clf:CNN": 0.646,
+      "clf:CNN+TCN": 0.6448,
+      "clf:MLP": 0.5984,
+      "clf:VRC-3PO": 0.6325,
+      "cnn_ensemble": 0.6513
+    }
+  },
+  "fms_gt2__tuned_architectures": {
+    "n_compositions": 5,
+    "n_models": 2,
+    "models": [
+      "tuned:CNN",
+      "tuned:MLP"
+    ],
+    "var_composition": 0.0012373766485577918,
+    "var_model": 0.0,
+    "var_residual": 0.0017382239879716677,
+    "share_composition": 0.4158409678259058,
+    "share_model": 0.0,
+    "share_residual": 0.5841590321740942,
+    "range_across_compositions_mean": 0.1131939929338146,
+    "range_across_models_mean": 0.015783664736191638,
+    "model_means": {
+      "tuned:CNN": 0.6141,
+      "tuned:MLP": 0.5984
+    }
+  }
+}

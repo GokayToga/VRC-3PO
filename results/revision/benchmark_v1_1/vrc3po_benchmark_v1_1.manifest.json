@@ -1,0 +1,75 @@
+{
+  "version": "1.1",
+  "rows": 99767,
+  "participants": 84,
+  "recordings": 221,
+  "rows_by_source": {
+    "simulations": 46703,
+    "maze": 34764,
+    "terrain": 18300
+  },
+  "participants_by_source": {
+    "maze": 37,
+    "simulations": 25,
+    "terrain": 22
+  },
+  "recordings_removed": [
+    {
+      "recording_id": "terrain_112_speedbumps",
+      "action": "identical content under different participant/condition labels; all copies removed (label ambiguous)",
+      "participant": "terrain_112.0",
+      "condition": "speedbumps",
+      "seconds": 300
+    },
+    {
+      "recording_id": "terrain_113_speedbumps",
+      "action": "identical content under different participant/condition labels; all copies removed (label ambiguous)",
+      "participant": "terrain_113.0",
+      "condition": "speedbumps",
+      "seconds": 300
+    }
+  ],
+  "cleaning": {
+    "bins_without_valid_eye_sample_pct": {
+      "maze": 0.0,
+      "simulations": 0.659,
+      "terrain": 0.0
+    },
+    "pupil_diam_L_below_floor": {
+      "terrain": 226
+    },
+    "pupil_diam_R_below_floor": {
+      "terrain": 157
+    },
+    "eye_open_L_negative": {},
+    "eye_open_R_negative": {},
+    "gaze_near_zero": {
+      "simulations": 619,
+      "terrain": 24
+    }
+  },
+  "simulations_native_rate_masking": {
+    "samples": 1363959,
+    "invalid_L_pct": 5.6379260666926205,
+    "invalid_R_pct": 5.977012505507863,
+    "invalid_gaze_pct": 0.0,
+    "per_recording_invalid_pct_median": 4.813690777271961,
+    "per_recording_invalid_pct_iqr": [
+      2.333222969653403,
+      8.934492915459327
+    ],
+    "per_recording_invalid_pct_max": 42.449778045293804,
+    "recordings_over_20pct": [
+      "simulations_beach_24_132618579620613460",
+      "simulations_beach_25_2132622055483156934",
+      "simulations_roller_10_132592838854995502",
+      "simulations_roller_25_132622038982571017",
+      "simulations_room_01_132568477355329050",
+      "simulations_sea_25_132622029650240028",
+      "simulations_walk_07_132573700167495112",
+      "simulations_walk_25_132622021697082631"
+    ]
+  },
+  "pupil_floor_mm": 1.0,
+  "sha256": "61a15d6d3f861f9aa93cc83c043b8175160312398aa2519a685e679fe679773d"
+}

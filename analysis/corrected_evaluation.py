@@ -161,19 +161,25 @@ def build_window_metadata(df: pd.DataFrame) -> tuple[np.ndarray, pd.DataFrame]:
     """Build labels and metadata in the same order as the manuscript notebook."""
     labels: list[float] = []
     rows: list[tuple[str, str, str, int, int]] = []
-    grouped = df.groupby(["global_participant_id", "condition"], sort=False)
-    for (participant, condition), session in grouped:
+    keys = ["recording_id"] if "recording_id" in df.columns else ["global_participant_id", "condition"]
+    for _, session in df.groupby(keys, sort=False):
         session = session.sort_values("elapsed_s").reset_index(drop=True)
+        participant = session["global_participant_id"].iloc[0]
+        condition = session["condition"].iloc[0]
         fms = session["fms"].to_numpy()
         source = str(session["source_dataset"].iloc[0])
         for start in range(0, len(session) - WINDOW_LENGTH + 1, WINDOW_STRIDE):
             end = start + WINDOW_LENGTH
             labels.append(float(fms[start:end].mean()))
-            rows.append((str(participant), str(condition), source, start, end))
+            rows.append((str(participant), str(condition), source, start, end,
+                         str(session["recording_id"].iloc[0]) if "recording_id" in session else None))
     metadata = pd.DataFrame(
         rows,
-        columns=["participant_id", "condition", "source_dataset", "start_index", "end_index"],
+        columns=["participant_id", "condition", "source_dataset", "start_index", "end_index",
+                 "recording_id"],
     )
+    if metadata["recording_id"].isna().all():
+        metadata = metadata.drop(columns="recording_id")
     return np.asarray(labels), metadata
 
 
