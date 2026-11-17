@@ -14,7 +14,7 @@ from analysis import generate_ieee_figures as g
 REPLACE = {
     '"25 people; 2,983 windows': '"25 people; 2,980 windows',
     '"22 people; 1,197 windows': '"22 people; 1,159 windows',
-    '"6,442 windows; 84 identifiers"': '"6,401 windows (v1.1)\\n84 identifiers"',
+    '"6,442 windows; 84 identifiers"': '"6,401 windows; 84 identifiers"',
     '"9 held-out people\\n768 windows; AUC 0.757\\nCluster CI 0.696-0.814"':
         '"47 IDs; 5x5 repeated CV\\nAUC 0.634; env.-only 0.677\\nWithin environment 0.487"',
     'output_dir, "fig1_study_design"': 'output_dir, "fig1_study_design_r1"',
